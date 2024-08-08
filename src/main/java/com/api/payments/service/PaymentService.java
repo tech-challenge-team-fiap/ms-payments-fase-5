@@ -16,7 +16,7 @@ public class PaymentService {
     @Autowired
     private PublishPaymentService publishPaymentService;
 
-    public boolean validate(PaymentRequest payment) {
+    public void validate(PaymentRequest payment) {
         logger.info("Start validation payment");
         boolean statusPayment = new Random().nextBoolean();
 
@@ -28,7 +28,5 @@ public class PaymentService {
             publishPaymentService.publish(payment, "payments-error");
             logger.info("send event for fail in queue");
         }
-
-        return statusPayment;
     }
 }
