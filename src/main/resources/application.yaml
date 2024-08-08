@@ -1,0 +1,16 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /
+
+info:
+  app:
+    name: '@project.artifactId@'
+    description: '@project.description@'
+    version: '@project.version@'
+
+aws:
+  secret:
+    key:
+  access:
+    key:

@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  api-payments:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    restart: on-failure
+    ports:
+      - "8080:8080"
+    networks:
+      - api-payments-network
+    depends_on:
+      - mysql
+    volumes:
+      - .m2:/root/.m2
+
+networks:
+  api-payments-network:
