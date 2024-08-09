@@ -47,7 +47,5 @@ public class PublishPaymentService {
         } catch (Exception e) {
             log.error("Queue Exception Message: {}", e.getMessage());
         }
-
     }
-
 }
