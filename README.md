@@ -1,1 +1,1 @@
-API de Pagamento(simulação)
+API de Pagamento(simulação) v2.
